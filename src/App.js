@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Header from "./components/Header";
+import SideBar from "./components/SideBar";
+import MainContainer from "./components/MainContainer";
 
 function App() {
+  const [sb, setSb] = useState(false);
+  const [hideSidebar, setHide] = useState(false);
+  const sidebarClicked = () => {
+    setSb(!sb);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", (resize) => {
+      if (resize.target.innerWidth <= 780) {
+        setHide(true);
+        setSb(false);
+      } else if (
+        resize.target.innerWidth > 780 &&
+        resize.target.innerWidth <= 1300
+      ) {
+        setSb(true);
+        setHide(false);
+      } else if (resize.target.innerWidth > 1300) {
+        setSb(false);
+        setHide(false);
+      }
+    });
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header onClicked={sidebarClicked} />
+      <div className="app_page">
+        <SideBar miniSidebar={sb} hide={hideSidebar} />
+        <MainContainer />
+      </div>
     </div>
   );
 }

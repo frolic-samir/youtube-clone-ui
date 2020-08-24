@@ -1,0 +1,70 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  opacity: 10;
+  background-color: #fff;
+}
+
+.header-logocontainer {
+  display: flex;
+  align-items: center;
+}
+.header-baricon {
+  margin: 0 26px;
+}
+
+.header-youtube-logo {
+  cursor: pointer;
+  width: 80px;
+  object-fit: contain;
+}
+
+.fontawesomeicon {
+  cursor: pointer;
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+
+.header-right-logo {
+  padding-right: 20px;
+  display: flex;
+  flex: 0.19;
+  justify-content: space-around;
+}
+
+.input-container {
+  display: flex;
+  flex: 0.54;
+}
+
+.input-container input {
+  flex: 1;
+  min-width: 20px;
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 5px 10px;
+  font-size: 16px;
+  margin: 14px 0;
+}
+
+.input-container input:focus {
+  border: 1px solid rgba(0, 0, 255, 0.4);
+}
+.input-container button {
+  outline: none;
+  border: 1px solid lightgray;
+  padding: 0 20px;
+  font-size: 16px;
+  border-left: none;
+  cursor: pointer;
+  margin: 14px 0;
+}
+
+@media only screen and (max-width: 955px) {
+  .header-right-logo {
+    flex: 0.28;
+  }
+}

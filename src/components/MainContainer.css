@@ -1,0 +1,20 @@
+.mc {
+  background-color: #f9f9f9;
+  border-top: 1px solid lightgray;
+  padding: 30px 35px;
+  flex: 1;
+}
+
+.header_title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.maincontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  column-gap: 10px;
+  row-gap: 25px;
+}

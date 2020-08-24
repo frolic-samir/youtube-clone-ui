@@ -1,0 +1,47 @@
+.videocard {
+  overflow: hidden;
+}
+
+.thumbnail__img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.videocard_info {
+  display: flex;
+  margin-top: 10px;
+}
+
+.channel_img_container {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.channel_img_container img {
+  width: 100%;
+}
+
+.videocard_info_text {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.videocard_title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.dot {
+  font-size: 3px;
+  padding: 0 5px;
+}
+
+.videocard_views {
+  display: flex;
+  align-items: center;
+}

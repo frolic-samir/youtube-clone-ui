@@ -1,0 +1,81 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.21;
+  height: 90vh;
+  position: sticky;
+  top: 60px;
+  overflow-y: hidden;
+}
+
+.minisidebar-hide {
+  display: none;
+}
+
+.miniSidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.21;
+  height: 90vh;
+  position: sticky;
+  top: 60px;
+  overflow-y: hidden;
+  max-width: 70px;
+}
+
+.miniSidebar span {
+  font-size: 1.3rem;
+  opacity: 0.6;
+}
+.miniSidebar ul {
+  margin-top: 10px;
+}
+.mini-title-p {
+  font-size: xx-small;
+  padding-top: 5px;
+}
+
+.miniSidebar li {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  padding: 10px 0;
+}
+.miniSidebar li:hover {
+  background-color: rgba(211, 211, 211, 0.6);
+}
+
+.sidebar:hover {
+  overflow: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 7px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: lightgray;
+}
+
+.sidebar li {
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: rgba(211, 211, 211, 0.6);
+}
+
+.sidebar span {
+  padding-right: 20px;
+  font-size: 1.3rem;
+  opacity: 0.6;
+}
+.sidebar hr {
+  margin: 10px 0;
+  opacity: 0.3;
+}
+
+.sidebar ul {
+  margin-top: 10px;
+}
